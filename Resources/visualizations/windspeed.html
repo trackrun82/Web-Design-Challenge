@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <title>Wind Speed</title>
-      <link rel="stylesheet" href="../styles/bootstrap.min.css">
-      <link rel="stylesheet" href="../styles/style.css">
-    </head>
-<body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<head>
+  <meta charset="UTF-8">
+  <title>Wind Speed</title>
+  <link rel="stylesheet" href="../styles/bootstrap.min.css">
+  <link rel="stylesheet" href="../styles/style.css">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href="../../index.html">Latitude</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -33,7 +31,9 @@
       </ul>
     </div>
   </nav>
+</head>
 
+<body>
   <div class="container">
     <div class="row">
       <div class="col-md-8 ml-md-auto">
@@ -46,35 +46,37 @@
         <p>The wind speed of a city seems to slightly decrease with proximity to the equator as seen in both linear regressions trending towards 0 latitude. The Southern hemisphere predicted a slightly higher wind speed near the equator compared to the Northern hemisphere and showed a slightly higher wind speed change as a city was further away from the equator. However, both hemispheres showed very varied data and very low r-squared values similar to the cloudiness correlations and therefore wind speed cannot reliably be predicted solely by the latitude of a city.</p>
       </div>
       <div class="col-md-4 ml-md-auto">
-        <h3>Visualizations</h3>
-        <hr>
-        <div class="row row-cols-4 row-cols-md-2">
-          <div class="col mb-4">
-            <div class="card">
-              <a href="../visualizations/maxtemp.html">
-              <img src="../assets/images/Fig1 Latitude vs Temperature.png" class="card-img-top" alt="Latitude vs. Temperature">
-              </a>
+        <div class="column">
+          <h3>Visualizations</h3>
+          <hr>
+          <div class="row row-cols-4 row-cols-md-2">
+            <div class="col mb-4">
+              <div class="card">
+                <a href="../visualizations/maxtemp.html">
+                <img src="../assets/images/Fig1 Latitude vs Temperature.png" class="card-img-top" alt="Latitude vs. Temperature">
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="col mb-4">
-            <div class="card">
-              <a href="../visualizations/humidity.html">
-              <img src="../assets/images/Fig2 Latitude vs Humidity.png" class="card-img-top" alt="Latitude vs. Humidity">
-              </a>
+            <div class="col mb-4">
+              <div class="card">
+                <a href="../visualizations/humidity.html">
+                <img src="../assets/images/Fig2 Latitude vs Humidity.png" class="card-img-top" alt="Latitude vs. Humidity">
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="col mb-4">
-            <div class="card">
-              <a href="../visualizations/cloudiness.html">
-              <img src="../assets/images/Fig3 Latitude vs Cloudiness.png" class="card-img-top" alt="Latitude vs. Cloudiness">
-              </a>
+            <div class="col mb-4">
+              <div class="card">
+                <a href="../visualizations/cloudiness.html">
+                <img src="../assets/images/Fig3 Latitude vs Cloudiness.png" class="card-img-top" alt="Latitude vs. Cloudiness">
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="col mb-4" id="current-image">
-            <div class="card">
-              <a href="../visualizations/windspeed.html">
-              <img src="../assets/images/Fig4 Latitude vs Wind Speed.png" class="card-img-top" alt="Latitude vs. Wind Speed">
-              </a>
+            <div class="col mb-4" id="current-image">
+              <div class="card">
+                <a href="../visualizations/windspeed.html">
+                <img src="../assets/images/Fig4 Latitude vs Wind Speed.png" class="card-img-top" alt="Latitude vs. Wind Speed">
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -85,5 +87,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
+
 </html>
