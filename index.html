@@ -2,71 +2,128 @@
 <html lang="en">
   <head>
       <meta charset="UTF-8">
-      <title>Beth Emborsky portfolio</title>
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-      <link rel="stylesheet" href="style.css">
+      <title>Weather Comparison</title>
+      <link rel="stylesheet" href="Resources/styles/bootstrap.min.css">
+      <link rel="stylesheet" href="Resources/styles/style.css">
     </head>
 <body>
-  <div class="row">
-    <div class = "col-md-12">
-      <h1>Beth Emborsky's Portfolio</h1>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="index.html">Latitude</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Plots</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="Resources/visualizations/maxtemp.html">Max Temperature</a>
+            <a class="dropdown-item" href="Resources/visualizations/humidity.html">Humidity</a>
+            <a class="dropdown-item" href="Resources/visualizations/cloudiness.html">Cloudiness</a>
+            <a class="dropdown-item" href="Resources/visualizations/windspeed.html">Wind Speed</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Resources/visualizations/comparison.html">Comparison</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Resources/visualizations/data.html">Data</a>
+        </li>
+      </ul>
     </div>
-  </div>
-  
-  
-  <div class="card mb-3" style="max-width: 1000px;">
-    <div class="centered">
-      <div class="row no-gutters">
-        <div class="col-md-6">
-          <img src="../Resources/Assets/images/Beth Emborsky profile picture.jpg" class="card-img" alt="Beth Emborsky profile picture">
-        </div>
-        <div class="col-md-6">
-          <div class="card-body">
-            <h5 class="card-title">Biography</h5>
-            <p class="card-text">This portfolio page showcases projects completed during Data Analysis bootcamp.</p>
-            <h6 class="card-subtitle mb-2 text-muted">Contacts</h6>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Email: trackrun82@yahoo.com</li>
-              <li class="list-group-item">Phone: 317-753-3057</li>
-            </ul>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 ml-md-auto">
+        <h2>Summary: Latitude vs X</h2>
+        <hr>
+        <img src = "Resources/assets/images/Fig1 Latitude vs Temperature.png" align = "left" id="FixedImage", alt="Latitude vs. Temperature">
+        <p>The purpose of this project was to analyze if weather changed in proximity to the equator.  To accomplish this analysis, data was pulled from the OpenWeatherMap API to assemble a dataset of over 500 cities.</p>
+        <p>After gathering the dataset, Matplotlib was used to create various plots comparing weather elements and latitude.  Factors looked into included: temperature, cloudiness, wind speed, and humidity.  Further analysis was also done to see whether a city was in the Northern or Southern hemisphere played a factor. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+      </div>
+      <div class="col-md-4 ml-md-auto">
+        <h3>Visualizations</h3>
+        <hr>       
+        <div class="row row-cols-4 row-cols-md-2">
+          <div class="col mb-4">
+            <div class="card">
+              <a href="Resources/visualizations/maxtemp.html">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="Resources/assets/images/Fig1 Latitude vs Temperature.png" class="d-block w-100" alt="Latitude vs. Temperature">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="Resources/assets/images/Fig5 Northern Hemisphere Latitude vs. Max Temp.png" class="d-block w-100" alt="Northern Hemisphere Latitude vs. Max Temperature">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="Resources/assets/images/Fig6 Southern Hemisphere Latitude vs. Max Temp.png" class="d-block w-100" alt="Southern Hemisphere Latitude vs. Max Temperature">
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="card">
+              <a href="Resources/visualizations/humidity.html">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="Resources/assets/images/Fig2 Latitude vs Humidity.png" class="d-block w-100" alt="Latitude vs. Humidity">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="Resources/assets/images/Fig7 Northern Hemisphere Latitude vs. Humidity.png" class="d-block w-100" alt="Northern Hemisphere Latitude vs. Humidity">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="Resources/assets/images/Fig8 Southern Hemisphere Latitude vs. Humidity.png" class="d-block w-100" alt="Southern Hemisphere Latitude vs. Humidity">
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="card">
+              <a href="Resources/visualizations/cloudiness.html">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="Resources/assets/images/Fig3 Latitude vs Cloudiness.png" class="d-block w-100" alt="Latitude vs. Cloudiness">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="Resources/assets/images/Fig9 Northern Hemisphere Latitude vs. Cloudiness.png" class="d-block w-100" alt="Northern Hemisphere Latitude vs. Cloudiness">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="Resources/assets/images/Fig10 Southern Hemisphere Latitude vs. Cloudiness.png" class="d-block w-100" alt="Southern Hemisphere Latitude vs. Cloudiness">
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="card">
+              <a href="Resources/visualizations/windspeed.html">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="Resources/assets/images/Fig4 Latitude vs Wind Speed.png" class="d-block w-100" alt="Latitude vs. Wind Speed">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="Resources/assets/images/Fig11 Northern Hemisphere Latitude vs. Wind Speed.png" class="d-block w-100" alt="Northern Hemisphere Latitude vs. Cloudiness">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="Resources/assets/images/Fig12 Southern Hemisphere Latitude vs. Wind Speed.png" class="d-block w-100" alt="Southern Hemisphere Latitude vs. Cloudiness">
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-    
-  <div class="card-deck">
-    <div class="card">
-      <img src="../Resources/Assets/images/Flu Case Totals vs. Avg. Temperature for All States.png" class="card-img-top" alt="Flu Case Totals vs. Avg. Temperature for All States">
-      <div class="card-body">
-        <h5 class="card-title">Project 1</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Flu vs. Weather</h6>
-        <p class="card-text">This project was to see if weather had an influence on cases of flu for various cities in the US.</p>
-        <button type="button" class="btn btn-outline-primary">
-          <a target="_blank" href="https://github.com/p4rc1v4l/flu_vs_weather" class="card-link"> Project 1 github</a>
-        </button>
-      </div>
-    </div>
-    <div class="card">
-      <img src="../Resources/Assets/images/project 2 image.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Project 2</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Project 2 Title</h6>
-        <p class="card-text">This is a holding point for future project content.</p>
-        <button type="button" class="btn btn-outline-primary">
-          <a target="_blank" href="" class="card-link"> Project 2 github</a>
-        </button>
-      </div>
-    </div>
-    <div class="card">
-      <img src="../Resources/Assets/images/big data analyst.jpg" class="card-img-top" alt="Big Data Analyst">
-      <div class="card-body">
-        <h5 class="card-title">Project 3</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Project 3 Title</h6>
-        <p class="card-text">This is a holding point for future project content.</p>
-        <button type="button" class="btn btn-outline-primary">
-          <a target="_blank" href="" class="card-link"> Project 3 github</a>
-        </button>
       </div>
     </div>
   </div>

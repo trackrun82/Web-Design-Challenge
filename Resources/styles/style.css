@@ -1,0 +1,47 @@
+h2 {
+  font-weight: 800;
+  color: purple;
+}
+
+h3 {
+  font-weight: 800;
+  color: purple;
+}
+
+#FixedImage {
+  width: 25%;
+  height: auto;
+}
+
+body {
+  background-color: lightgray;
+}
+
+.row {
+  background-color: white;
+}
+
+.col-md-8 {
+  border: 1px solid;
+  border-color: darkorchid;
+  padding-top: 10px;
+}
+
+.col-md-4 {
+  border: 1px solid;
+  border-color: darkorchid;
+  padding-top: 15px;
+}
+
+#current-image {
+  border: 0.5px solid;
+  border-color: purple;
+}
+
+.imagecenter {
+  text-align: center;
+}
+
+.regression {
+  width: 50%;
+}
